@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  width: 6.25%;
+  height: 6.25%;
+  background-color: aquamarine;
+  border: 1px solid black;
+}

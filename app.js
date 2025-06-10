@@ -42,6 +42,10 @@ gridLoad(num);
 // user select grid size
 sizeBtn.addEventListener('click', function () {
   removeContainer();
-  const userSelect = prompt('Enter a number to determine grid size');
+  let userSelect = prompt('Enter a number to determine grid size');
+  if (`${userSelect}` >= 100) {
+    alert(`Must enter in a number greater than 0 and less than 100`);
+    userSelect = prompt('Enter grid size');
+  }
   gridLoad(userSelect);
 });

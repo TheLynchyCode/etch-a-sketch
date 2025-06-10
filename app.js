@@ -1,6 +1,16 @@
+// VARIABLES
 let container;
 const sizeBtn = document.querySelector('#sizeBtn');
 let num = 16;
+
+// FUNCTIONS D
+// random RGB colour creation
+function getRandomRGB() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b}`;
+}
 
 // grid creation
 const gridLoad = function (n) {
@@ -13,30 +23,27 @@ const gridLoad = function (n) {
     // divEl.textContent = i;
     divEl.classList.add('active');
     divEl.addEventListener('mouseenter', function () {
-      divEl.classList.add('nonactive');
+      // divEl.classList.add('nonactive');
+      divEl.style.backgroundColor = getRandomRGB();
     });
-    // height of vp
+
     const height = container.offsetHeight;
-    // width of vp
     const width = container.offsetWidth;
-    // number multiplied by itself that makes total number of
-    // let result = Math.sqrt(n);
     let divHeight = height / n;
     let divWidth = width / n;
     heightPercent = (divHeight / height) * 100;
     widthPercent = (divWidth / width) * 100;
+
     container.appendChild(divEl);
-    // divEl.setAttribute('style', `height: ${heightPercent}%`);
     divEl.setAttribute('style', `width: ${widthPercent}%`);
   }
 };
 
+// removes html container element
 function removeContainer() {
   container.remove();
 }
 
-// create 16 x 16 grid upon page loading
-// window.addEventListener('DOMContentLoaded', gridLoad(num));
 gridLoad(num);
 
 // user select grid size

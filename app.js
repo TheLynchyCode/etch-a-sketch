@@ -3,7 +3,7 @@ let container;
 const sizeBtn = document.querySelector('#sizeBtn');
 let num = 16;
 
-// FUNCTIONS D
+// FUNCTIONS
 // random RGB colour creation
 function getRandomRGB() {
   let r = Math.floor(Math.random() * 256);
@@ -20,7 +20,6 @@ const gridLoad = function (n) {
   const powerOf = Math.pow(n, 2);
   for (let i = 1; i <= powerOf; i++) {
     const divEl = document.createElement('div');
-    // divEl.textContent = i;
     divEl.classList.add('active');
     divEl.addEventListener('mouseenter', function () {
       // divEl.classList.add('nonactive');

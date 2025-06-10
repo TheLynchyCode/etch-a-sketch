@@ -11,9 +11,14 @@
   flex-wrap: wrap;
 }
 
-.container > div {
-  width: 6.25%;
-  height: 6.25%;
-  background-color: aquamarine;
-  border: 1px solid black;
+#sizeBtn {
+  display: block;
+  font-family: 'Barrio';
+  font-size: 1.7rem;
+  height: 5vh;
+  width: 100%;
+}
+
+.active {
+  background-color: black;
 }
